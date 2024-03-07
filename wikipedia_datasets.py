@@ -467,8 +467,8 @@ def main():
         print("Generating subset mode. Make sure you typed in \"old\" and \"new\" in command line")
         generate_subsets_csv(old, new)
         wikipedia_csv_to_json(old, new, 0)
-        generate_unchanged_csv(old, new)
-        wikipedia_csv_to_json(old, new, 1)
+        # generate_unchanged_csv(old, new)
+        # wikipedia_csv_to_json(old, new, 1)
         print("Generating subsets and unchanged in csv, json file completed!") # Ready to be aligned with Wikidata
 
         generate_gpt2_subset(old, new)
