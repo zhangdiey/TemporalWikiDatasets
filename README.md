@@ -93,25 +93,6 @@ python wikipedia_datasets.py --mode subset --old <previous_month> --new <new_mon
 > old : year + month + date, e.g. 20210801   
 > new : year + month + date, e.g. 20210901   
 
-or
-```
-python wikipedia_datasets.py --mode entire --tenth_digit <0-16> --month <month>
-```
-**Generate datasets for entire datasets**
-> mode : entire (generate datasets for entire datasets)   
-> tenth_digit : One number between 0-16 (There are 16 sets of Wikipedia bundle)   
-> month : year + month + date, e.g. 20210801   
-
-We suggest you to use bash file for mode entire. You can easily modify example bash script file **wikipedia_gpt2_data.sh** and type command below in terminal.
-``` 
-bash wikipedia_gpt2_data.sh
-```
-
-If you want to use bash file for mode subset. You can easily use bash script file script file **wikipedia_gpt2_data_sub.sh** and type command below in terminal.
-``` 
-bash wikipedia_gpt2_data_sub.sh <old_time_step> <new_time_step>
-```
-
 
 ## 2. Wikidata
 
@@ -150,6 +131,6 @@ bash wikipedia_wikidata_crawling.sh
 ``` 
 python evaluation_datasets.py --mode <mode> --old <previous_month> --new <new_month>
 ```
-> mode : unchanged / changed   
+> mode : changed   
 > old : year + month + date, e.g. 20210801   
 > new : year + month + date, e.g. 20210901   
