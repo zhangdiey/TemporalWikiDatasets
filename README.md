@@ -99,7 +99,7 @@ python wikipedia_datasets.py --mode subset --old <previous_month> --new <new_mon
 **Section 2** preprocess Wikidata from extracting entity id from Wikidata Dump to mapping id to corresponding string item.
 
 ``` 
-python wikidata_datasets.py --mode <mode> --old <previous_month> --new <new_month> --idx <0-100> --combine <0 or 1>
+python wikidata_datasets.py --mode changed --old <previous_month> --new <new_month> --idx <0-100> --combine <0 or 1>
 ```
 > mode : unchanged / changed   
 > old : year + month + date, e.g. 20210801   
@@ -129,7 +129,7 @@ bash wikipedia_wikidata_crawling.sh
 **Section 3** aligned subsets file from **Section 1** and Wikidata item file from **Section 2** by mapping Wikipedia page-id and Wikidata entity id.
 
 ``` 
-python evaluation_datasets.py --mode <mode> --old <previous_month> --new <new_month>
+python evaluation_datasets.py --mode changed --old <previous_month> --new <new_month>
 ```
 > mode : changed   
 > old : year + month + date, e.g. 20210801   
