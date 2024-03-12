@@ -427,8 +427,8 @@ def merge(old, new, mode):
                 big_item_list.append(j)
         except:
             continue
-    id_fname = "../TemporalWiki_datasets/Wikidata_datasets/{old}_{new}/{mode}/total_{mode}_id.json"
-    item_fname = "../TemporalWiki_datasets/Wikidata_datasets/{old}_{new}/{mode}/total_{mode}_item.json"
+    id_fname = f"../TemporalWiki_datasets/Wikidata_datasets/{old}_{new}/{mode}/total_{mode}_id.json"
+    item_fname = f"../TemporalWiki_datasets/Wikidata_datasets/{old}_{new}/{mode}/total_{mode}_item.json"
     with open(id_fname, "w") as write_json_file_1:
         json.dump(big_id_list, write_json_file_1, indent=4) 
     with open(item_fname, "w") as write_json_file_2:
@@ -438,9 +438,9 @@ def main():
     arg = construct_generation_args()
 
     mode = arg.mode # mode : unchanged / updated / new
-    if mode != "unchanged" and mode != "updated" and mode != "new":
-        print("You typed in wrong mode!")
-        exit()
+    # if mode != "unchanged" and mode != "updated" and mode != "new":
+    #     print("You typed in wrong mode!")
+    #     exit()
 
     old = arg.old # old : year + month + date, e.g. 20210801
     new = arg.new # new : year + month + date, e.g. 20210901
