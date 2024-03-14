@@ -45,13 +45,6 @@ cd Wikipedia_datasets
 mv text <time_step>
 ```
 
-or You can use scripts for wikipedia dump
-
-Please type following command in terminal.
-``` 
-bash wikipedia_dump.sh <time_step>
-```
-
 ## 0-2. Wikidata Dump Download
 
 Please choose [Wikidata Dump File](https://dumps.wikimedia.org/wikidatawiki/) in XML format (About 120 GB). You have to download for both time step (old_time_step, new_time_step).
@@ -134,3 +127,9 @@ python evaluation_datasets.py --mode changed --old <previous_month> --new <new_m
 > mode : changed   
 > old : year + month + date, e.g. 20210801   
 > new : year + month + date, e.g. 20210901   
+
+## 4. Relations
+
+{Name}_relations.json contains a split of all unique relations. 
+
+The purpose of this step is to manually create a whitelist of all parent relations (properties) used to filter out triples.
