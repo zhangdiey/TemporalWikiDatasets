@@ -132,4 +132,10 @@ python evaluation_datasets.py --mode changed --old <previous_month> --new <new_m
 
 {Name}_relations.json contains a split of all unique relations. 
 
+Please ignore {time}-{time}_changed.csv, these were used to generate {Name}_relations.json
+
 The purpose of this step is to manually create a whitelist of all parent relations (properties) used to filter out triples.
+
+For a triple, such as "Mangkunegara IX,country of citizenship,Indonesia", we consider the relation "country of citizenship" related to plausibility because it captures an event that one's citizenship changed. Then go to its wikidata page https://www.wikidata.org/wiki/Property:P27 and locate "Statements" -> "instance of". Here we can see "Wikidata property for items about people" is an interesting parent relation.
+
+Keep as many parent relations like this as possible, then we have another look and form this whitelist of parent relations.
